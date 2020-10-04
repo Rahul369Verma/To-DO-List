@@ -1,0 +1,4 @@
+/node_modules
+npm-debug.logo
+.DS_Store
+/*.env

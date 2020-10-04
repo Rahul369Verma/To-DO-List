@@ -119,7 +119,11 @@ app.post("/delete",function (req, res) {
 
 });
 
+let port = process.env.PORT;
+if(port == null || port == ""){
+	port = 5000;
+}
 
-app.listen(5000,function () {
-	console.log('server 5000 is started');
+app.listen(port,function () {
+	console.log('server is started 5000 and on Heroku');
 });
