@@ -11,8 +11,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"))
 app.set('view engine', 'ejs');
 const day = date.getdate();
-mongoose.connect("mongodb+srv://rahul:test123@rahul.ta3ka.mongodb.net/todolistDB?retryWrites=true&w=majority",{useNewUrlParser: true , useUnifiedTopology: true });
-
+mongoose.connect("mongodb+srv://rahul:test123@rahul.ta3ka.mongodb.net/todolistDB?retryWrites=true&w=majority"
+,{useNewUrlParser: true , useUnifiedTopology: true, useFindAndModify: false });
 
 const itemSchema = mongoose.Schema({
 	name: String
